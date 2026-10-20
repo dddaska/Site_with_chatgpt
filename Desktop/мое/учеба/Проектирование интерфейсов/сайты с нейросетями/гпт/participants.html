@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Знакомьтесь с участниками Street Food Fest: бургеры, азиатская кухня, пицца, десерты и напитки." >
+    <meta name="theme-color" content="#fff9f0">
+    <title>Участники — Street Food Fest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700;800&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Street Food Fest — главная">
+                <span class="logo-icon">🍔</span>
+                <span class="logo-text">
+                    STREET
+                    <span>FOOD FEST</span>
+                </span>
+            </a>
+
+            <nav class="nav" id="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="participants.html" class="active" aria-current="page">
+                    Участники
+                </a>
+                <a href="program.html">Программа</a>
+                <a href="index.html#about">О фестивале</a>
+            </nav>
+
+            <a class="button button--small header-action" href="#participants" >
+                Найти еду
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="main-nav" aria-expanded="false" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
+
+        <!-- ЗАГЛАВНЫЙ БЛОК -->
+
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span>✦</span>
+                        Гастрономическая карта фестиваля
+                    </div>
+
+                    <h1>
+                        Здесь вкусно
+                        <span class="highlight">всем!</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        От сочных бургеров до нежных десертов —
+                        мы собрали любимые блюда со всего мира
+                        в одном месте. Выбирай, пробуй, возвращайся
+                        за добавкой!
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button" href="#participants">
+                            Выбрать кухню
+                            <span aria-hidden="true">↓</span>
+                        </a>
+
+                        <a class="button button--outline" href="program.html">
+                            Смотреть программу
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <div class="hero-meta-icon">🍕</div>
+                            <div>
+                                <strong>Разные кухни</strong>
+                                <span>От классики до экзотики</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-meta-item">
+                            <div class="hero-meta-icon">🌱</div>
+                            <div>
+                                <strong>На любой вкус</strong>
+                                <span>В том числе без мяса</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <img class="hero-image" src="images/appetitnaya_ulichnaya_eda_na_grile.avif" alt="Разнообразные блюда для компании друзей" >
+                    <div class="hero-floating-card">
+                        <span class="emoji">😋</span>
+                        <div>
+                            <strong>Время пробовать!</strong>
+                            <small>Новые вкусы ждут тебя</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-sticker">
+                        <strong>YUM!</strong>
+                        <span>Так вкусно</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАТЕГОРИИ -->
+
+        <section class="section section--alt" id="participants">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <span class="eyebrow">Наши участники</span>
+                    <h2>
+                        Найди свой
+                        <span class="text-orange">вкус</span>
+                    </h2>
+
+                    <p>
+                        Выбирай категорию и знакомься с участниками.
+                        Нажми на фильтр, чтобы оставить только
+                        интересующие тебя блюда.
+                    </p>
+                </div>
+
+                <!-- КНОПКИ ФИЛЬТРА -->
+
+                <div class="filter-buttons" role="group" aria-label="Фильтр по категориям еды" >
+
+                    <button class="filter-button active" type="button" data-filter="all" aria-pressed="true" >
+                        🍽️ Всё
+                    </button>
+
+                    <button  class="filter-button" type="button" data-filter="burgers" aria-pressed="false" >
+                        🍔 Бургеры
+                    </button>
+
+                    <button class="filter-button"  type="button" data-filter="asia" aria-pressed="false" >
+                        🍜 Азия
+                    </button>
+
+                    <button class="filter-button"  type="button" data-filter="pizza" aria-pressed="false" >
+                        🍕 Пицца
+                    </button>
+
+                    <button class="filter-button" type="button"  data-filter="desserts" aria-pressed="false" >
+                        🍰 Десерты
+                    </button>
+
+                    <button class="filter-button" type="button" data-filter="drinks" aria-pressed="false" >
+                        🥤 Напитки
+                    </button>
+                </div>
+
+                <p id="filter-results" aria-live="polite" style="margin-bottom: 20px; color: #55534e; font-size: 14px;" >
+                    Найдено участников: 9
+                </p>
+
+                <!-- КАРТОЧКИ УЧАСТНИКОВ -->
+
+                <div class="participants-grid">
+
+                    <!-- 1. БУРГЕРЫ -->
+
+                    <article class="participant-card" data-category="burgers" >
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/burgery.avif" alt="Большой бургер с сыром и овощами" loading="lazy" >
+                            <span class="participant-category">
+                                🍔 Бургеры
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Бургерная «Дым и мясо»</h3>
+                            <p>
+                                Сочные котлеты, свежие булочки,
+                                авторские соусы и тот самый вкус
+                                гриля.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🔥 На гриле</span>
+                                <span>💰 От 350 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Американская кухня</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. АЗИАТСКАЯ КУХНЯ -->
+
+                    <article class="participant-card" data-category="asia" >
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/miska_aziatskoi_lapshi.avif" alt="Миска азиатской лапши" loading="lazy" >
+                            <span class="participant-category">
+                                🍜 Азия
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Wok & Roll</h3>
+                            <p>
+                                Лапша вок, овощи, яркие специи
+                                и сочетания вкусов, вдохновлённые
+                                азиатской уличной едой.
+                            </p>
+                            <div class="participant-meta">
+                                <span>🥢 Готовим при тебе</span>
+                                <span>💰 От 300 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Азиатская кухня</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 3. ПИЦЦА -->
+
+                    <article class="participant-card" data-category="pizza" >
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/pizza_s_syrom_i_svezimi_ingredientami.avif" alt="Пицца с сыром и свежими ингредиентами" loading="lazy" >
+                            <span class="participant-category">
+                                🍕 Пицца
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Pizza Piccola</h3>
+                            <p>
+                                Тонкое тесто, тянущийся сыр
+                                и классические итальянские
+                                сочетания прямо из печи.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🧀 Много сыра</span>
+                                <span>💰 От 280 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Итальянская кухня</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. ДЕСЕРТЫ -->
+
+                    <article class="participant-card" data-category="desserts" >
+
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/appetitnui_yagodnyui_desert.avif" alt="Аппетитный ягодный десерт" loading="lazy" >
+                            <span class="participant-category">
+                                🍰 Десерты
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Sweet Moment</h3>
+                            <p>
+                                Ягодные десерты, нежные кремы,
+                                выпечка и маленькие сладкие
+                                радости для хорошего настроения.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🍓 Свежие ягоды</span>
+                                <span>💰 От 220 ₽</span>
+                            </div>
+                            <div class="participant-footer">
+                                <strong>Сладости</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5. НАПИТКИ -->
+
+                    <article class="participant-card" data-category="drinks" >
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/osvezayushiye_napitki_so_ldom.avif" alt="Освежающие напитки со льдом" loading="lazy" >
+                            <span class="participant-category">
+                                🥤 Напитки
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Lemonade Lab</h3>
+                            <p>
+                                Домашние лимонады, цитрусовые
+                                миксы, лёд и освежающие
+                                сочетания на любой вкус.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🍋 Цитрусовые</span>
+                                <span>💰 От 150 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Напитки</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. БУРГЕРЫ -->
+
+                    <article class="participant-card" data-category="burgers" >
+
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/burger_s_hrustyashey_korochkoi.avif" alt="Бургер с хрустящей булочкой" loading="lazy" >
+                            <span class="participant-category">
+                                🍔 Бургеры
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Smash Brothers</h3>
+                            <p>
+                                Хрустящая корочка котлеты,
+                                расплавленный сыр и насыщенный
+                                вкус в каждом кусочке.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🔥 Smash-бургеры</span>
+                                <span>💰 От 390 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Street food</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 7. АЗИАТСКАЯ КУХНЯ -->
+
+                    <article class="participant-card" data-category="asia" >
+
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/aziatskiye_bluda_s_ovoshami_i_sousom.avif" alt="Азиатские блюда с овощами и соусом" loading="lazy">
+                            <span class="participant-category">
+                                🍜 Азия
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Тайская улица</h3>
+                            <p>
+                                Пряные соусы, овощи, лапша
+                                и вдохновение уличными
+                                рынками Таиланда.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🌶️ Пряные вкусы</span>
+                                <span>💰 От 320 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Тайская кухня</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 8. ДЕСЕРТЫ -->
+
+                    <article class="participant-card" data-category="desserts" >
+
+                        <div class="participant-image-wrap">
+                            <img class="participant-image" src="images/morozenoye_oblako.avif" alt="Нежный десерт со сливками и ягодами" loading="lazy" >
+                            <span class="participant-category">
+                                🍰 Десерты
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Мороженое «Облако»</h3>
+                            <p>
+                                Кремовое мороженое, фруктовые
+                                топпинги и необычные вкусы
+                                для жаркого летнего дня.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🍦 Много вкусов</span>
+                                <span>💰 От 180 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Мороженое</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 9. НАПИТКИ -->
+
+                    <article class="participant-card" data-category="drinks">
+
+                        <div class="participant-image-wrap">
+                            <img
+                                class="participant-image"
+                                src="images/lemonad_s_citrusom_i_ldom.avif"
+                                alt="Лимонад с цитрусами и льдом"
+                                loading="lazy">
+                            <span class="participant-category">
+                                🥤 Напитки
+                            </span>
+                        </div>
+
+                        <div class="participant-content">
+                            <h3>Fresh & Fizzy</h3>
+                            <p>
+                                Яркие фруктовые напитки,
+                                освежающие миксы и лимонады
+                                с натуральными ингредиентами.
+                            </p>
+
+                            <div class="participant-meta">
+                                <span>🍊 Фруктовые миксы</span>
+                                <span>💰 От 170 ₽</span>
+                            </div>
+
+                            <div class="participant-footer">
+                                <strong>Напитки</strong>
+                                <a href="#food-note">Подробнее ↓</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ -->
+
+        <section class="section" id="food-note">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <img class="about-image" src="images/gosty_otdyhayut_za_stolikami_v_kafe.avif" alt="Гости отдыхают за столиками в кафе" loading="lazy">
+                        <div class="about-note">
+                            <strong>Ешь с удовольствием!</strong>
+                            <p>
+                                Пробуй новое и делись впечатлениями
+                                с друзьями.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <span class="eyebrow">Твой гастротур</span>
+                        <h2>
+
+                            Не знаешь,
+
+                            <span class="text-orange">с чего начать?</span>
+                        </h2>
+
+                        <p>
+
+                            Начни с любимого блюда, а затем
+
+                            отправляйся исследовать новые вкусы.
+
+                            На фестивале можно собрать собственный
+
+                            гастрономический маршрут.
+
+                        </p>
+
+                        <ul class="about-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <div>
+                                    <strong>Выбирай по настроению</strong>
+                                    <p>
+
+                                        Сытный обед, лёгкий перекус
+
+                                        или что-нибудь сладкое.
+
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <div>
+                                    <strong>Пробуй новое</strong>
+                                    <p>
+
+                                        Открой для себя кухни
+
+                                        разных стран.
+
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <div>
+                                    <strong>Планируй заранее</strong>
+                                    <p>
+
+                                        Загляни в программу, чтобы
+
+                                        не пропустить интересные
+
+                                        активности.
+
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div style="margin-top: 28px;">
+                            <a class="button" href="program.html">
+                                Открыть программу →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРИЗЫВ К ДЕЙСТВИЮ -->
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+
+                    <h2>
+                        Готов к самому вкусному лету?
+                    </h2>
+
+                    <p>
+
+                        Посмотри программу фестиваля и выбери,
+
+                        чем займёшься в первую очередь.
+
+                    </p>
+
+                    <a class="button button--white" href="program.html">
+                        Смотреть программу →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a class="logo" href="index.html">
+                        <span class="logo-icon">🍔</span>
+                        <span class="logo-text">
+
+                            STREET
+
+                            <span>FOOD FEST</span>
+                        </span>
+                    </a>
+                    <p>
+
+                        Еда, музыка и летнее настроение.
+
+                        Встречаемся на Street Food Fest!
+
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="participants.html">Участники</a></li>
+                        <li><a href="program.html">Программа</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Фестиваль</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">О фестивале</a></li>
+                        <li><a href="program.html#schedule">Расписание</a></li>
+                        <li><a href="index.html#gallery">Галерея</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@example.com">Написать нам</a></li>
+                        <li><a href="index.html#location">Как добраться</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+
+                    © <span data-current-year>2026</span> Street Food Fest.
+
+                    Учебный проект.
+
+                </p>
+
+                <div class="footer-socials">
+                    <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">VK</a>
+                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
